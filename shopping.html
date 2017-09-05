@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>极果网模仿</title>
+    <style>
+        body{
+            margin: 0;
+        }
+
+        .center1{
+
+            padding-top: 20px;
+            padding-left: 230px;
+            margin:0 auto;
+            width: 1300px;
+            overflow: hidden;
+            /*height: 700px;*/
+            /*border:1px solid #F5F5F5;*/
+        }
+        /*在不设置浮动的情况下，给大量div设置inline-block可让其同行显示，但拉伸窗口仍会让div移动，对此要给这些div的父div设置固定的宽高*/
+
+        .center2{
+            padding-left: 230px;
+            padding-top: 20px;
+            margin:0 auto;
+            width: 1300px;
+            overflow: hidden;
+        }
+        .center-b{
+            background-color:#F5F5F5;
+        }
+        .hot{
+            width:130px;
+            height: 40px;
+            /*margin-left: 75px;*/
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        .item{
+            width: 246px;
+            height: 253px;
+            display: inline-block;
+            position: relative;
+            margin-right: 29px;
+            margin-bottom: 20px;
+            float: left;
+        }
+
+
+        .item2{
+            width: 246px;
+            height: 253px;
+            display: inline-block;
+            position: relative;
+            margin-right: 29px;
+            margin-bottom: 50px;
+            float: left;
+        }
+
+
+        .item-img{
+            width: 246px;
+            height: 153px;
+            border: 1px solid #F5F5F5;
+            /*float: left;*/
+            border-radius: 15px;
+            /*div边框设置为圆角*/
+            /*position: relative;*/
+
+        }
+        .item-img img{
+            width: 100%;
+            /*height: 100%;*/
+            border-radius: 15px 15px 0 0;
+            /*图片边框设置为圆角*/
+        }
+        .item-img span{
+            -webkit-border-radius: 15px;
+            /*也是一种处理圆角效果的方式*/
+            color: white;
+            font-size: 10px;
+            text-align: center;
+            position: absolute;
+            left: 10px;
+            top:10px;
+        }
+        .discount{
+            width: 40px;
+            height: 19px;
+            background-color: indigo;
+        }
+        .discount2{
+            width: 40px;
+            height: 19px;
+            background-color: darkgray;
+        }
+        .first{
+            width: 40px;
+            height: 19px;
+            background-color: orangered;
+        }
+        .vip{
+            width: 76px;
+            height: 19px;
+            background-color: gold;
+        }
+        .info{
+            background-color: white;
+            width: 246px;
+            height: 101px;
+            border: 1px solid #F5F5F5;
+            margin-top: 0;
+            /*position: relative;*/
+
+
+        }
+        .info2{
+
+            font-size: 16px;
+            background-color: white;
+            width: 246px;
+            height: 131px;
+            border: 1px solid #F5F5F5;
+            margin-top: 0;
+            position: relative;
+
+
+        }
+        .info2-s1 img{
+            -webkit-border-radius: 50%;
+            width:26px;
+            height:26px;
+            margin-right: 20px;
+
+        }
+
+        .title{
+            height: 40px;
+            overflow: hidden;
+            padding: 15px;
+        }
+
+        .title2{
+            height: 45px;
+            overflow: hidden;
+            padding: 13px;
+        }
+
+        .info-span1{
+            font-size: 10px;
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+        }
+
+        .info-span2{
+            font-size: 10px;
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+        }
+
+        .info2-s{
+            font-size: 15px;
+            color: red;
+            position: absolute;
+            left: 15px;
+            bottom: 30px;
+        }
+
+        .info2-s1{
+            font-size: 7px;
+            color: #b2b2b2;
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+        .info2-s2{
+            font-size: 7px;
+            color: #b2b2b2;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .p{
+            color: orangered;
+            font-size: 17px;
+        }
+
+        .money{
+            color: red;
+            font-size: 20px;
+        }
+          /*             头部             */
+        .news{
+            width: 100%;
+            height: 324px;
+        }
+        .news img{
+            width: auto;
+            height: 324px;
+        }
+
+           .tips{
+            margin-top: 40px;
+            padding-left: 260px;
+            margin-left: 250px;
+        }
+        .tips a{
+            font-size: 16px;
+            text-align: center;
+            padding-top: 10px;
+            color: black;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        li:hover a{
+            /*background-color: red;*/
+            color: red;
+        }
+        .tips ul{
+            width: 867px;
+            height: 41px;
+            list-style: none;
+            /*display: inline-block;*/
+            overflow: hidden;
+            margin-bottom: 0;
+
+        }
+        .tips li{
+            border: 1px solid whitesmoke;
+            width: 90px;
+            height: 34px;
+            display: inline-block;
+
+
+            float: left;
+        }
+
+
+
+
+        .header{
+            margin-top: 10px;
+            overflow: hidden;
+            /*触发bfc规则*/
+        }
+        .header1{
+            display: block;
+            /*margin-left: 500px;*/
+            width: 100%;
+            position: relative;
+
+            overflow: hidden;
+            /*padding-left: 0;*/
+        }
+        .logo{
+            margin-left: 550px;
+            width: 160px;
+            height: 50px;
+            display: inline-block;
+            position: absolute;
+            /*left: 0;*/
+
+
+        }
+        .logo img{
+            padding-left: 0;
+            width:130px;
+            height: 50px;
+        }
+
+
+        .box{
+            width: 420px;
+            height: 36px;
+            border: 1px solid red;
+            margin-left: 800px;
+            margin-top: 15px;
+            padding: 0;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .kind{
+            width: 78px;
+            height: 30px;
+            border: 1px solid red;
+            display: inline-block;
+
+            position: absolute;
+            top:15px;
+            left: 1250px;
+            text-Align:center;
+            padding-top: 5px;
+
+        }
+        .kind a{
+
+            text-decoration: none;
+            font-size: 14px;
+            color: red;
+
+
+        }
+        .input{
+            width: 80%;
+            height: 36px;
+            padding-top: 7px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-right: 1px solid red;
+            display: inline-block;
+            float: left;
+        }
+        .find{
+            width: 20%;
+            height: 36px;
+            background-color: red;
+            border: none;
+            position: absolute;
+            right: 0;
+
+        }
+        .find button{
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+        }
+        .box input{
+            width:100%;
+            height: 20px;
+            border: none;
+        }
+
+
+
+        /*                 尾部                 */
+        .footer{
+            text-align: center;
+            width: 100%;
+            height:330px ;
+            border-top: 2px solid red;
+            overflow: hidden;
+            /*margin-top: 30px;*/
+        }
+
+        .company{
+            margin: 30px auto;
+            width: 1080px;
+            height: 150px;
+            position: relative;
+        }
+
+        .footer-bottom{
+            width: 100%;
+            height: 72px;
+            background-color: #F4F4F4;
+            margin-bottom: 0;
+
+        }
+
+        .footer-bottom p{
+            text-align: center;
+            color:#b6b6b6;
+            line-height: 15px;
+            font-size: 10px;
+        }
+        #footer-logo{
+            width: 135px;
+            height:67.05px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .footer-code1{
+            width: 140px;
+            height:176px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #code1{
+            width: 100%;
+            height:auto;
+        }
+        address{
+            font-size: 10px;
+             width: 100%;
+             height: 36px;
+         }
+        .footer-code2{
+            width: 140px;
+            height:176px;
+            position: absolute;
+            top:0;
+            right: 175px;
+        }
+        #code2{
+            width: 100%;
+            height:auto;
+        }
+
+        .company-center{
+            width: 520px;
+            height: 152px;
+            border-right: 1px solid #f0f0f0;
+
+            position: absolute;
+            left:200px;
+            top:0;
+            padding-top: 0px;
+        }
+
+        dl{
+
+            font-size: 12px;
+            text-align: left;
+            line-height: 24px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+
+            display: inline-block;
+            float:left;
+        }
+
+        dd{
+            margin-left: 0;
+            padding: 0;
+        }
+       .footer a{
+            font-size: 12px;
+            color: #999999;
+            text-decoration: none;
+
+        }
+        .help{
+            padding-top: 10px;
+            font-size: 10px;
+            color: black;
+            width: 100%;
+            height: 30px;
+        }
+        .help span{
+            margin-right: 40px;
+        }
+        .help a{
+            text-decoration: none;
+            font-size: 10px;
+            color: #999999;
+            margin-right: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="header">
+            <div class="header1">
+                <div class="logo">
+                    <img src="http://cdn.jiguo.com/static/Pc/compression_3.1/style/images/header-logo@2x.png">
+                </div>
+
+                <div class="box">
+                    <div class="input"><input type="text"></div>
+                    <div class="find"><button>搜索</button></div>
+                </div>
+
+                <div class="kind">
+                    <a href="#">全部分类</a>
+                </div>
+
+
+            </div>
+            <div class="tips">
+                <ul>
+                <li><a href="#" style="color: white;background-color: red;">首页</a></li>
+                <li><a href="#">试用</a></li>
+                <li><a href="#">新品</a></li>
+                <li><a href="#">折扣</a></li>
+                <li><a href="#">清单</a></li>
+                <li><a href="#">体验</a></li>
+                <li><a href="#">体验师</a></li>
+                <li><a href="#">APP下载</a></li>
+                <li><a href="#">行业资讯</a></li>
+                </ul>
+            </div>
+            <div class="news">
+                <img src="http://s1.jiguo.com/9c0e6f9f-b32c-4d2e-ad36-d46d15432a14/original">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="center">
+            <div class="center1">
+                <div class="hot"><strong>热门试用</strong></div>
+                <div class="item">
+                    <div class="item-img">
+                        <span class="discount">折扣</span>
+                        <img src="http://s1.jiguo.com/5f7f6861-1d33-4b39-8f29-d21da743ef53/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">SUUNTO SPARTAN TRAINER WHR</div>
+                        <span class="info-span1"><span class="p">54人</span>参与</span>
+                        <span class="info-span2">剩余时间: 14天</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="discount">折扣</span>
+                        <img src="http://s1.jiguo.com/27153af1-92d5-4417-b82a-59c20cbd48d4/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">kiwy安全座椅</div>
+                        <span class="info-span1"><span class="p">102人</span>参与</span>
+                        <span class="info-span2">剩余时间: 13天</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="first">首发</span>
+                        <img src="http://s1.jiguo.com/06a4eab4-3025-4848-88be-9771240ea788/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">能力风暴奥科流思0号</div>
+                        <span class="info-span1"><span class="p">114人</span>参与</span>
+                        <span class="info-span2">剩余时间: 13天</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="first">首发</span>
+                        <img src="http://s1.jiguo.com/2d04c426-4a12-470b-8311-e770588a08e3/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">惠普战66高性能独显轻薄商务本</div>
+                        <span class="info-span1"><span class="p">378人</span>参与</span>
+                        <span class="info-span2">剩余时间: 8天</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="vip">体验师专享</span>
+                        <img src="http://s1.jiguo.com/93656e3d-d899-4d91-86c1-469aa94edaf0/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">352 X50空气净化器</div>
+                        <span class="info-span1"><span class="p">287人</span>参与</span>
+                        <span class="info-span2">剩余时间: 12天</span>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="discount">折扣</span>
+                        <img src="http://s1.jiguo.com/dd679704-0557-49cd-998d-1084281b75f3/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">查蒙蒂纳 不粘炖汤锅</div>
+                        <span class="info-span1"><span class="p">178人</span>参与</span>
+                        <span class="info-span2">剩余时间: 7天</span>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="vip">体验师专享</span>
+                        <img src="http://s1.jiguo.com/a1d74758-1050-438b-9fdb-1bd0b8384a19/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">Omega Juicers多功能原汁机</div>
+                        <span class="info-span1"><span class="p">4人</span>参与</span>
+                        <span class="info-span2">剩余时间: 3天</span>
+
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-img">
+                        <span class="first">首发</span>
+                        <img src="http://s1.jiguo.com/0e3911c6-6e83-4832-b8c4-06212060eca7/640?imageView2/1/w/640/h/400/q/100">
+                    </div>
+                    <div class="info">
+                        <div class="title">努比亚Z17 8GB版</div>
+                        <span class="info-span1"><span class="p">2048人</span>参与</span>
+                        <span class="info-span2">剩余时间: 7天</span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="center-b">
+            <div class="center2">
+                <div class="hot"><strong>精选</strong></div>
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">折扣</span>
+                        <img src="http://s1.jiguo.com/dde20334-02c5-49e1-8b21-75dada1d1f31/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">Levi's男式长袖衬衫：牛仔就是超显帅，扎线袖扣经典百搭</div>
+                        <div class="info2-s"><span class="money">￥49   </span>历史最低</div>
+                        <span class="info2-s1">有贷网</span>
+                        <span class="info2-s2">47分钟前</span>
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">折扣</span>
+                        <img src="http://s1.jiguo.com/71ff40d2-6d2f-451c-87ca-6e38c69297a3/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">耐克Air jordon J23 low跑鞋：轻量舒适缓震，飞一般的速度</div>
+                        <div class="info2-s"><span class="money">￥489   </span>历史最低</div>
+                        <span class="info2-s1">2个来源</span>
+                        <span class="info2-s2">2小时前</span>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">折扣</span>
+                        <img src="http://s1.jiguo.com/09c377e8-7e86-4c77-81ac-8760fb2dfbd1/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">Hellolulu电脑包：轻盈防水面料，雨天也不怕淋湿电脑</div>
+                        <div class="info2-s"><span class="money">￥298   </span>历史最低</div>
+                        <span class="info2-s1">优集品</span>
+                        <span class="info2-s2">3小时前</span>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">新品</span>
+                        <img src="http://s1.jiguo.com/0fb1a7fd-b51a-4239-9fd9-1e9520ed3aea/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">乐高发布最大号千年隼，7000多块积木拼到手抽筋</div>
+
+                        <span class="info2-s1">暂无报价</span>
+                        <span class="info2-s2">5小时前</span>
+                    </div>
+                </div>
+
+                <div class="item2" style="width: 512px">
+                    <div class="item-img" style="width: 512px;height: 170px">
+                        <img style="height: 100%" src="http://s1.jiguo.com/c9e111bd-a146-4132-a296-5227a17da36a/640?imageView2/1/w/640/h/237/q/100">
+                    </div>
+                    <div class="info2" style="width: 100%;height: 110px">
+                        <div class="title2">最懂夜的黑，不仅能照明更是野营安全保障丨视频</div>
+                        <span class="info2-s1"><img src="http://s1.jiguo.com/avatar1578650/230x230">xn  .  7分钟前</span>
+                        <span class="info2-s2">
+                            <span><img src="../resource/img/1.png">  2</span>
+                            <span><img src="../resource/img/2.png">  0</span>
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">折扣</span>
+                        <img src="http://s1.jiguo.com/38916f2f-3a6d-4481-a9e8-c3b5158d8dfc/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">德国stabilo铅笔套装：加粗不易断，安全无毒易水洗</div>
+                        <div class="info2-s"><span class="money">￥128   </span>劲爆超值好价</div>
+                        <span class="info2-s1">天猫</span>
+                        <span class="info2-s2">08-31</span>
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">折扣</span>
+                        <img src="http://s1.jiguo.com/f8aae3fe-4c9e-4700-bbee-7d28d75c6d18/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">锐步PVC防滑瑜伽垫：加厚材质增加回弹效果，防滑性极佳</div>
+                        <div class="info2-s"><span class="money">￥179   </span>历史最低</div>
+                        <span class="info2-s1">亚马逊中国</span>
+                        <span class="info2-s2">08-31</span>
+                    </div>
+                </div>
+
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">折扣</span>
+                        <img src="http://s1.jiguo.com/8d3e6140-87da-4e09-8b8f-a75e2298d80e/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">Divoom Outdoor音箱：户外专用防水防尘，音效响彻山谷</div>
+                        <div class="info2-s"><span class="money">￥299   </span>历史最低</div>
+                        <span class="info2-s1">京东</span>
+                        <span class="info2-s2">2小时前</span>
+                    </div>
+                </div>
+                <div class="item2">
+                    <div class="item-img">
+                        <span class="discount2">新品</span>
+                        <img src="http://s1.jiguo.com/6d1813dd-4351-437a-951f-9eaa9ef23e33/640?imageView2/1/w/520/h/320/q/100">
+                    </div>
+                    <div class="info2">
+                        <div class="title2">大疆发布铂金版御，续航增11%，黑色精灵4亮相</div>
+                        <span class="info2-s1">暂无报价</span>
+                        <span class="info2-s2">1天前</span>
+                    </div>
+                </div>
+
+                <div class="item2" style="width: 512px">
+                    <div class="item-img" style="width: 512px;height: 170px">
+                        <img style="height: 100%" src="http://s1.jiguo.com/cf35d356-f168-4ec0-a671-706ef9c40f80/640?imageView2/1/w/640/h/237/q/100">
+                    </div>
+                    <div class="info2" style="width: 100%;height: 110px">
+                        <div class="title2">配置全方位超越kindle，掌阅成为EDC标配丨视频</div>
+                        <span class="info2-s1"><img src="http://s1.jiguo.com/avatar2821623/230x230">伪装者  .  1天前</span>
+                        <span class="info2-s2">
+                            <span><img src="../resource/img/1.png">  1</span>
+                            <span><img src="../resource/img/2.png">  2</span>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="company">
+                <img id="footer-logo" src="http://cdn.jiguo.com/static/Pc/compression_3.1/style/images/footer-logo.png">
+                <div class="footer-code1">
+                    <img id="code1" src="http://cdn.jiguo.com/static/Pc/compression_3.1/style/images/footer-erweima-2@2x.png">
+                    <address>极果微信公众号: jguojguo</address>
+                </div>
+                <div class="footer-code2">
+                    <img id="code2" src="http://cdn.jiguo.com/static/Pc/compression_3.1/style/images/footer-erweima-1.png">
+                    <address>扫码下载极果手机客户端</address>
+                </div>
+                <div class="company-center">
+                    <dl>
+                        <dt>免费试用</dt>
+                        <dd><a href="#">试用流程</a></dd>
+                        <dd><a href="#">如何提高成功率</a></dd>
+                        <dd><a href="#">体验师攻略</a></dd>
+
+                    </dl>
+
+                    <dl>
+                        <dt>关于极果</dt>
+                        <dd><a href="#">发展历程</a></dd>
+                        <dd><a href="#">合作伙伴</a></dd>
+                        <dd><a href="#">加入极果</a></dd>
+                        <dd><a href="#">网站地图</a></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>商务合作</dt>
+                        <dd><a href="#">产品试用</a></dd>
+                        <dd><a href="#">营销服务</a></dd>
+                        <dd><a href="#">电商导购</a></dd>
+                        <dd><a href="#">产品分销</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                    </dl>
+
+                    <dl>
+                        <dt>购买攻略</dt>
+                        <dd><a href="#">美亚海淘教程</a></dd>
+                        <dd><a href="#">日亚海淘教程</a></dd>
+                        <dd><a href="#">淘淘转运攻略</a></dd>
+                        <dd><a href="#">kickstarter 众筹购买攻略</a></dd>
+                        <dd><a href="#">indiegogo 众筹购买攻略</a></dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="help">
+                <span>友情链接</span>
+                <a>智东西</a>
+                <a>腾讯科技</a>
+                <a>搜狐数码</a>
+                <a>凤凰科技</a>
+                <a>凤凰数码</a>
+                <a>泡泡网</a>
+                <a>极客公园</a>
+                <a>汽车科技</a>
+                <a>果库</a>
+                <a>半糖</a>
+                <a>趣玩网</a>
+                <a>B12</a>
+                <a>网易严选</a>
+                <a>新零售</a>
+                <a>良仓</a>
+                <a>设计癖</a>
+                <a>爱燃烧</a>
+                <a>更多</a>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2017 极果  All rights reserved. 京ICP备14052927号</p>
+                <p>北京极智飞扬科技有限公司  |  010-82366768</p>
+                <p>北京市海淀区王庄路1号清华同方科技广场D座东楼805室</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
